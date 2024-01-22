@@ -1,4 +1,5 @@
 import string
+import math
 '''
 Melvin Berkoh
 CS 100 Section 002
@@ -50,14 +51,19 @@ Exercise 1.2. Start the Python interpreter and use it as a calculator.
 # 1. How many seconds are there in 42 minutes 42 seconds?
 minutesToSeconds = 42 * 60
 result = minutesToSeconds + 42
-print(result)
+print(result, ' seconds')
 
 # 2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
 milesToKm = 10 * 1.61
-print(milesToKm)
+print(milesToKm, ' miles')
 
 # 3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per mile in minutes and seconds)? What is your average speed in miles per hour?
-pace = milesToKm / result
+pace = milesToKm / result  # pace in miles to seconds
+
+# this would convert the seconds to minutes note that the reminder is seconds
+print('The pace in which you are running (miles to minutes) is:  ', round((pace*60), 2))
+# this would convert the seconds to minutes note that the reminder is minutes
+print('The pace in which you are running (miles to hours) is:  ', (pace*60*60))
 
 
 '''
@@ -73,8 +79,38 @@ semi-colon at the end of a Python statement?
 
 '''
 Exercise 2.2. Practice using the Python interpreter as a calculator:
-1. The volume of a sphere with radius r is 43 πr3. What is the volume of a sphere with radius 5?
-2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount. Shipping costs $3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for 60 copies?
-3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
-
 '''
+# 1. The volume of a sphere with radius r is 43 πr3. What is the volume of a sphere with radius 5?
+
+
+def volume(radius):
+    result = 4/3 * math.pi * radius**3
+    return round(result, 2)
+
+
+print('The volume of a sphere with radius 43:', volume(43), 'm^3')
+print('The volume of a sphere with radius 43:', volume(5), 'm^3')
+
+# 2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount.
+# Shipping costs $3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for 60 copies?
+
+
+def totalPrice(numberOfBooks):
+    total = 0
+    if (numberOfBooks >= 1):
+        basePrice = 24.95 * numberOfBooks
+        discountedPrice = basePrice - (basePrice * .4)
+        if (numberOfBooks == 1):
+            total = discountedPrice + 3
+        else:
+            numberOfBooks = numberOfBooks - 1
+            total = discountedPrice + 3 + (.75*numberOfBooks)
+    else:
+        print('You did not by any books')
+    return round(total, 2)
+
+
+print('If you purchased sixty books the total price would be : $', totalPrice(60))
+
+# 3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at tempo (7:12 per mile)
+# and 1 mile at easy pace again, what time do I get home for breakfast?
