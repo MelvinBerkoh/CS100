@@ -83,34 +83,23 @@ Exercise 2.2. Practice using the Python interpreter as a calculator:
 # 1. The volume of a sphere with radius r is 43 πr3. What is the volume of a sphere with radius 5?
 
 
-def volume(radius):
-    result = 4/3 * math.pi * radius**3
-    return round(result, 2)
 
+result = 4/3 * math.pi * 43**3
+print('The volume of a sphere with radius 43:', round(result, 2), 'm^3')
 
-print('The volume of a sphere with radius 43:', volume(43), 'm^3')
-print('The volume of a sphere with radius 43:', volume(5), 'm^3')
+result = 4/3 * math.pi * 5**3
+print('The volume of a sphere with radius 5:', round(result, 2), 'm^3')
 
 # 2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount.
 # Shipping costs $3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for 60 copies?
 
 
-def totalPrice(numberOfBooks):
-    total = 0
-    if (numberOfBooks >= 1):
-        basePrice = 24.95 * numberOfBooks
-        discountedPrice = basePrice - (basePrice * .4)
-        if (numberOfBooks == 1):
-            total = discountedPrice + 3
-        else:
-            numberOfBooks = numberOfBooks - 1
-            total = discountedPrice + 3 + (.75*numberOfBooks)
-    else:
-        print('You did not by any books')
-    return round(total, 2)
-
-
-print('If you purchased sixty books the total price would be : $', totalPrice(60))
+numberOfBooks = 60
+basePrice = 24.95 * numberOfBooks
+discountedPrice = basePrice - (basePrice * .4)
+numberOfBooks = numberOfBooks - 1
+total = discountedPrice + 3 + (.75*numberOfBooks)
+print('If you purchased sixty books the total price would be : $', round(total, 2))
 
 # 3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at tempo (7:12 per mile)
 # and 1 mile at easy pace again, what time do I get home for breakfast?
