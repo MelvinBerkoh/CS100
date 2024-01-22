@@ -26,21 +26,40 @@ favoriteAnimal = 'Cat'
 Exercise 1.1
 
 1.In a print statement, what happens if you leave out one of the parentheses, or both?
-Answer: you will receive an error when trying to run the code. 
+
+Answer: You will receive an error when trying to run the code. Since the print statement is in a sense a function it needs to have both parenthesis. 
+
 2. If you are trying to print a string, what happens if you leave out one of the quotation marks,
 or both?
-Answer:  you will receive an error when trying to run the code
+
+Answer:  you will receive an error when trying to run the code. If the code is missing one of the quotation marks it would treat everything after that quotation mark as a string. The quotes mark the beginning  and end of a string literal.
+In Addition to that if a word is put into a print statement without quotes and is not a reserved keyword it would be treated as a variable. 
+
 3. You can use a minus sign to make a negative number like -2. What happens if you put a plus
 sign before a number? What about 2++2?
-8 Chapter
+
+Answer: if you put plus in front of the number it makes that number positive. If you input 2++2 it would result in the addition of the two numbers.
+For example a++b would be the same as a+(+b) make the b positive and adding them. If the input was a+(-b) it would add a negative number subtracting the two numbers.
+
 '''
+
 '''
 Exercise 1.2. Start the Python interpreter and use it as a calculator.
-1. How many seconds are there in 42 minutes 42 seconds?
-2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
-3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per
-mile in minutes and seconds)? What is your average speed in miles per hour?
+
 '''
+# 1. How many seconds are there in 42 minutes 42 seconds?
+minutesToSeconds = 42 * 60
+result = minutesToSeconds + 42
+print(result)
+
+# 2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
+milesToKm = 10 * 1.61
+print(milesToKm)
+
+# 3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per mile in minutes and seconds)? What is your average speed in miles per hour?
+pace = milesToKm / result
+
+
 '''
 Exercise 2.1. Repeating my advice from the previous chapter, whenever you learn a new feature,
 you should try it out in interactive mode and make errors on purpose to see what goes wrong. • We’ve seen that n = 42 is legal. What about 42 = n?
