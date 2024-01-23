@@ -61,21 +61,32 @@ print(milesToKm, ' miles')
 pace = milesToKm / result  # pace in miles to seconds
 
 # this would convert the seconds to minutes note that the reminder is seconds
-print('The pace in which you are running (miles to minutes) is:  ', round((pace*60), 2))
+print('The pace in which you are running (miles to minutes) is: ',
+      round((pace*60), 2), 'mins')
 # this would convert the seconds to minutes note that the reminder is minutes
-print('The pace in which you are running (miles to hours) is:  ', (pace*60*60))
+print('The pace in which you are running (miles to hours) is: ',
+      round((pace*60*60), 2), 'mph')
 
 
 '''
 Exercise 2.1. Repeating my advice from the previous chapter, whenever you learn a new feature,
-you should try it out in interactive mode and make errors on purpose to see what goes wrong. • We’ve seen that n = 42 is legal. What about 42 = n?
-How about x = y = 1?
-• In some languages every statement ends with a semi-colon, ;. What happens if you put a
-semi-colon at the end of a Python statement?
-• What if you put a period at the end of a statement?
-• In math notation you can multiply x and y like this: xy. What happens if you try that in Python?
+you should try it out in interactive mode and make errors on purpose to see what goes wrong. • 
 
 '''
+# 1. We’ve seen that n = 42 is legal. What about 42 = n?
+# 42 = n
+# Answer: You will receive a SyntaxError i believe due to the order in which you write the assignment statement its usually variableName = value
+# How about x = y = 1?
+# x = y = 1
+# Answer: This expression is valued it would assignment the value of 1 to y then the value of y to x so both x and y would hold the value of 1
+
+# • In some languages every statement ends with a semi-colon, ;. What happens if you put a semi-colon at the end of a Python statement?
+# x = 1;
+# Answer: in the python language semicolons are not needed but can be used as a end of statement. In my IDE when I save with a semicolon at the end of a statement it gets removed
+
+# What if you put a period at the end of a statement?
+# print('hello world').
+# Answer: periods at the end of a statement gives a SyntaxError. When using the period in python it is used followed by a member function for example math.pi as shown in an example later on.
 
 '''
 Exercise 2.2. Practice using the Python interpreter as a calculator:
@@ -83,11 +94,11 @@ Exercise 2.2. Practice using the Python interpreter as a calculator:
 # 1. The volume of a sphere with radius r is 43 πr3. What is the volume of a sphere with radius 5?
 
 
-
 result = 4/3 * math.pi * 43**3
 print('The volume of a sphere with radius 43:', round(result, 2), 'm^3')
 
 result = 4/3 * math.pi * 5**3
+
 print('The volume of a sphere with radius 5:', round(result, 2), 'm^3')
 
 # 2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount.
