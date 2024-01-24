@@ -93,12 +93,12 @@ Exercise 2.2. Practice using the Python interpreter as a calculator:
 '''
 # 1. The volume of a sphere with radius r is 43 πr3. What is the volume of a sphere with radius 5?
 
-
+# radius of 43
 result = 4/3 * math.pi * 43**3
 print('The volume of a sphere with radius 43:', round(result, 2), 'm^3')
 
+# radius of 5
 result = 4/3 * math.pi * 5**3
-
 print('The volume of a sphere with radius 5:', round(result, 2), 'm^3')
 
 # 2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount.
