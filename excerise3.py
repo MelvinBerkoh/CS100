@@ -24,3 +24,8 @@ print(lst)
 # sort the list in increasing order
 lst.sort()
 print(lst)
+
+# tuples are not mutable
+tp1 = (1, 2, 2, 3, 3, 4)
+tp1.count(2)
+print(tp1)
