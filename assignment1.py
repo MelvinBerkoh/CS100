@@ -28,12 +28,12 @@ Exercise 1.1
 
 1.In a print statement, what happens if you leave out one of the parentheses, or both?
 
-Answer: You will receive an error when trying to run the code. Since the print statement is in a sense a function it needs to have both parenthesis. 
+Answer: You will receive a syntax error when trying to run the code. Since the print statement is in a sense a function it needs to have both parenthesis. 
 
 2. If you are trying to print a string, what happens if you leave out one of the quotation marks,
 or both?
 
-Answer:  you will receive an error when trying to run the code. If the code is missing one of the quotation marks it would treat everything after that quotation mark as a string. The quotes mark the beginning  and end of a string literal.
+Answer:  you will receive a syntax error when trying to run the code. If the code is missing one of the quotation marks it would treat everything after that quotation mark as a string. The quotes mark the beginning  and end of a string literal.
 In Addition to that if a word is put into a print statement without quotes and is not a reserved keyword it would be treated as a variable. 
 
 3. You can use a minus sign to make a negative number like -2. What happens if you put a plus
@@ -54,18 +54,23 @@ result = minutesToSeconds + 42
 print(result, ' seconds')
 
 # 2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
-milesToKm = 10 * 1.61
-print(milesToKm, ' miles')
+milesToKm = 10 / 1.61
+print(round(milesToKm, 2), ' miles')
 
 # 3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per mile in minutes and seconds)? What is your average speed in miles per hour?
-pace = milesToKm / result  # pace in miles to seconds
+result = result / 60
+hoursInresult = result/60
+mph = milesToKm/hoursInresult
+# print('results in mins', result)
+minsPace = result//milesToKm   # pace in miles to seconds
+secsPace = result % milesToKm   # pace in miles to seconds
 
 # this would convert the seconds to minutes note that the reminder is seconds
 print('The pace in which you are running (miles to minutes) is: ',
-      round((pace*60), 2), 'mins')
+      minsPace, 'mins and', round(secsPace, 1), 'seconds per mile')
 # this would convert the seconds to minutes note that the reminder is minutes
 print('The pace in which you are running (miles to hours) is: ',
-      round((pace*60*60), 2), 'mph')
+      round((mph), 2), 'mph')
 
 
 '''
@@ -91,11 +96,7 @@ you should try it out in interactive mode and make errors on purpose to see what
 '''
 Exercise 2.2. Practice using the Python interpreter as a calculator:
 '''
-# 1. The volume of a sphere with radius r is 43 πr3. What is the volume of a sphere with radius 5?
-
-# radius of 43
-result = 4/3 * math.pi * 43**3
-print('The volume of a sphere with radius 43:', round(result, 2), 'm^3')
+# 1. The volume of a sphere with radius r is 4/3 πr3. What is the volume of a sphere with radius 5?
 
 # radius of 5
 result = 4/3 * math.pi * 5**3
@@ -112,5 +113,19 @@ numberOfBooks = numberOfBooks - 1
 total = discountedPrice + 3 + (.75*numberOfBooks)
 print('If you purchased sixty books the total price would be : $', round(total, 2))
 
-# 3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at tempo (7:12 per mile)
+# 3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8mins 15sec  per mile), then 3 miles at tempo (7 mins 12 secs per mile)
 # and 1 mile at easy pace again, what time do I get home for breakfast?
+# answer in hrs mins and secs
+hour = 6
+mins = 52
+seconds = 0
+easyPaceInSeconds = (8*60) + 15
+tempPaceInSeconds = (7*60) + 12
+timeToGetHome = (2*easyPaceInSeconds) + (3*tempPaceInSeconds)
+currentMins = timeToGetHome//60
+currentSeconds = timeToGetHome % 60
+totalMins = 52 + currentMins
+totalSeconds = currentSeconds
+
+print('you will get home around (hr : mins: seconds)', (hour+(totalMins//60)),
+      ':', (totalMins % 60), ':', totalSeconds)
