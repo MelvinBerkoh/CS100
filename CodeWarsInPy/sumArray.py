@@ -9,15 +9,22 @@ Mind the input validation.
 
 
 def sum_array(arr):
-    # first want to take the array and look for the min and max number
-    minNum = min(arr)
-    maxNum = max(arr)
-    # remove the max and min numbers from the list
-    arr.remove(minNum)
-    arr.remove(maxNum)
+    # For case when the given array is empty or has NOne
+    if not arr:
+        return 0
+    else:
+        # the length of the array/ list for a conditional test
+        testCondition = len(arr)
+        if testCondition == 1:
+            return 0
+        # first want to take the array and look for the min and max number
+        minNum = min(arr)
+        maxNum = max(arr)
+        # remove the max and min numbers from the list
+        arr.remove(minNum)
+        arr.remove(maxNum)
+# use the built in function to add all the values remaining in the list
+        return sum(arr)
 
-    # use the built in function to add all the values remaining in the list
-    return sum(arr)
 
-
-print(sum_array([1, 2, 3, 3, 4, 5]))
+print(sum_array([None]))
