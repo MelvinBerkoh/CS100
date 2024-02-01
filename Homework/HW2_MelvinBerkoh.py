@@ -1,4 +1,11 @@
 '''
+Melvin Berkoh
+CS 100 Section 002
+HW 02, February 01, 2024
+
+'''
+
+'''
 This question practices the use of a list method. Assign to the variable grades a list of 10 letter grades
 from among 'A', 'B', 'C', 'D', and 'F'. For example:
 grades = ['A', 'F', 'C', 'F', 'A', 'B', 'A', 'C', 'A', 'B']
