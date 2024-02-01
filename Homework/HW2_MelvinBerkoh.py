@@ -8,6 +8,8 @@ grades, the following would be correct output:
 frequency = [4, 2, 2, 0, 2]
 Your expression must give the correct values for any list of grades, not just the one in your list. Hint:
 use the list method count.
+'''
+'''
 2. This question practices list membership, list indexes and list slices.
 a. Write a Python statement that creates a list named dog_breeds that contains the elements
 'collie', 'sheepdog', 'Chow', and 'Chihuahua' in the order given.
