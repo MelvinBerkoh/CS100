@@ -40,3 +40,24 @@ the last element of dog_breeds.
 d. Write a Python statement that tests whether 'Persian' is in the list dog_breeds and prints
 either True or False depending on the answer.
 '''
+# Write a Python statement that creates a list named dog_breeds that contains the elements
+# 'collie', 'sheepdog', 'Chow', and 'Chihuahua' in the order given.
+dog_breeds = ['collie', 'sheepdog', 'Chow', 'Chihuahua']
+
+# Write a Python statement that uses list slicing to create a list herding_dogs that is made up of
+# the first two elements of dog_breeds.
+herding_dogs = dog_breeds[0: 1] + dog_breeds[1: 2]
+
+print(herding_dogs)
+
+# Write a Python statement that uses list indexing to create a list tiny_dogs that is made up of
+# the last element of dog_breeds.
+tiny_dogs = []
+tiny_dogs.append(dog_breeds[-1])
+print(tiny_dogs)
+
+# Write a Python statement that tests whether 'Persian' is in the list dog_breeds and prints
+# either True or False depending on the answer.
+# type casting the count of persian in the list dog breeds to a boolean. This could only work in one case since im not allowed to use if statements yet
+boolean = bool(dog_breeds.count('Persian'))
+print(boolean)
