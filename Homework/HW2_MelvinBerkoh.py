@@ -9,6 +9,22 @@ frequency = [4, 2, 2, 0, 2]
 Your expression must give the correct values for any list of grades, not just the one in your list. Hint:
 use the list method count.
 '''
+# create initial list of grades
+grades = ['A', 'A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'F']
+# create empty list the hold times shown up
+frequency = []
+# create variables to hold the count of each grade
+amountOfA = frequency.count('A')
+amountOfB = frequency.count('B')
+amountOfC = frequency.count('C')
+amountOfD = frequency.count('D')
+amountOfF = frequency.count('F')
+frequency.append(amountOfA)
+frequency.append(amountOfB)
+frequency.append(amountOfC)
+frequency.append(amountOfD)
+frequency.append(amountOfF)
+print(frequency)
 '''
 2. This question practices list membership, list indexes and list slices.
 a. Write a Python statement that creates a list named dog_breeds that contains the elements
