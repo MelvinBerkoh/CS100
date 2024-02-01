@@ -14,16 +14,20 @@ grades = ['A', 'A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'F']
 # create empty list the hold times shown up
 frequency = []
 # create variables to hold the count of each grade
-amountOfA = frequency.count('A')
-amountOfB = frequency.count('B')
-amountOfC = frequency.count('C')
-amountOfD = frequency.count('D')
-amountOfF = frequency.count('F')
+amountOfA = grades.count('A')
+amountOfB = grades.count('B')
+amountOfC = grades.count('C')
+amountOfD = grades.count('D')
+amountOfF = grades.count('F')
+
+# add all of the values to the new list would prefer to use a loop but I cant at this moment
 frequency.append(amountOfA)
 frequency.append(amountOfB)
 frequency.append(amountOfC)
 frequency.append(amountOfD)
 frequency.append(amountOfF)
+
+# display the results
 print(frequency)
 '''
 2. This question practices list membership, list indexes and list slices.
