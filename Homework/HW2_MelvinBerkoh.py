@@ -66,5 +66,6 @@ print(tiny_dogs)
 # Write a Python statement that tests whether 'Persian' is in the list dog_breeds and prints
 # either True or False depending on the answer.
 # type casting the count of persian in the list dog breeds to a boolean. This could only work in one case since im not allowed to use if statements yet
-boolean = bool(dog_breeds.count('Persian'))
-print(boolean)
+# boolean = bool(dog_breeds.count('Persian'))
+# print(boolean)
+print('Persian' in dog_breeds)
