@@ -8,3 +8,4 @@ myScreen = turtle.Screen()
 myPen = turtle.Turtle()
 
 myPen.forward(100)
+turtle.exitonclick()
