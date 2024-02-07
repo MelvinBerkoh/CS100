@@ -45,5 +45,18 @@ myPen.left(90)
 # reset
 myPen.reset()
 
+# creating a pentagon
+myPen.forward(100)
+myPen.left(120)
+myPen.forward(100)
+myPen.left(120)
+myPen.forward(100)
+myPen.right(330)
+myPen.forward(100)
+myPen.left(90)
+myPen.forward(100)
+myPen.left(90)
+myPen.forward(100)
+myPen.reset()
 # had to add this because when in VS when using turtle it  closes after program is ran
 turtle.exitonclick()
