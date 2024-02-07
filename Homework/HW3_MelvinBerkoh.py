@@ -23,7 +23,16 @@ c. the greatest common divisor of 63 and 49
 myScreen = turtle.Screen()
 # make a pen
 myPen = turtle.Turtle()
+# forward moves the pen while left rotates the pen
+# Creating an equilateral triangle
 myPen.forward(100)
+myPen.left(120)
+myPen.forward(100)
+myPen.left(120)
+myPen.forward(100)
+# reset the position of the turtle
+myPen.reset()
 
+# Creating a square
 # had to add this because when in VS when using turtle it  closes after program is ran
 turtle.exitonclick()
