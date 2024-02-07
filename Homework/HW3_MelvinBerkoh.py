@@ -10,7 +10,7 @@ HW 03, February 05, 2024
 '''
 Write code that uses turtle graphics to draw an equilateral triangle, a square and a regular pentagon,
 each with side length 100.
-2. Write code that uses turtle graphics to draw four concentric circles of radius 50, 100, 150 and 200.
+
 3. Write code that uses the Python math module to compute and print out the values of
 a. 100!
 b. the log (base 2) of 1,000,000
@@ -21,6 +21,8 @@ c. the greatest common divisor of 63 and 49
 
 # always need to add a screen
 myScreen = turtle.Screen()
+# make screen a little larger
+myScreen.screensize(900, 900)
 # make a pen
 myPen = turtle.Turtle()
 # forward moves the pen while left rotates the pen
@@ -58,5 +60,14 @@ myPen.forward(100)
 myPen.left(90)
 myPen.forward(100)
 myPen.reset()
+
+# 2. Write code that uses turtle graphics to draw four concentric circles of radius 50, 100, 150 and 200.
 # had to add this because when in VS when using turtle it  closes after program is ran
+myPen.circle(50)
+myPen.home()
+myPen.circle(100)
+myPen.home()
+myPen.circle(150)
+myPen.home()
+myPen.circle(200)
 turtle.exitonclick()
