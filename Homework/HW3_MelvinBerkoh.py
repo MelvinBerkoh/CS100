@@ -20,6 +20,7 @@ myScreen.screensize(900, 900)
 myPen = turtle.Turtle()
 # forward moves the pen while left rotates the pen
 # Creating an equilateral triangle
+myPen.speed(3)
 myPen.fillcolor('black')
 myPen.begin_fill()
 myPen.forward(100)
