@@ -13,12 +13,14 @@ HW 03, February 05, 2024
 
 # always need to add a screen
 myScreen = turtle.Screen()
+myScreen.bgcolor('orange')
 # make screen a little larger
 myScreen.screensize(900, 900)
 # make a pen
 myPen = turtle.Turtle()
 # forward moves the pen while left rotates the pen
 # Creating an equilateral triangle
+
 myPen.forward(100)
 myPen.left(120)
 myPen.forward(100)
