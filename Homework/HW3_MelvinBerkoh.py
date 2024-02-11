@@ -65,24 +65,42 @@ myPen.end_fill()
 myPen.reset()
 
 # 2. Write code that uses turtle graphics to draw four concentric circles of radius 50, 100, 150 and 200.
+myPen.penup()
+
+# Draw the first circle with radius 200
+myPen.right(90)
+myPen.forward(200)
+myPen.right(270)
+myPen.pendown()
 myPen.circle(200)
 myPen.penup()
 myPen.home()
-myPen.goto(100, 100)
 
+# Draw the second circle with radius 150
+myPen.right(90)
+myPen.forward(150)
+myPen.right(270)
 myPen.pendown()
 myPen.circle(150)
 myPen.penup()
 myPen.home()
-myPen.goto(75, 75)
 
+# Draw the third circle with radius 100
+myPen.right(90)
+myPen.forward(100)
+myPen.right(270)
+myPen.pendown()
 myPen.circle(100)
-myPen.pendown()
-myPen.home()
 myPen.penup()
-myPen.goto(50, 50)
-myPen.circle(50)
+myPen.home()
+
+# Draw the fourth circle with radius 50
+myPen.right(90)
+myPen.forward(50)
+myPen.right(270)
 myPen.pendown()
+myPen.circle(50)
+myPen.penup()
 myPen.home()
 
 
