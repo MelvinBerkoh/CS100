@@ -65,14 +65,26 @@ myPen.end_fill()
 myPen.reset()
 
 # 2. Write code that uses turtle graphics to draw four concentric circles of radius 50, 100, 150 and 200.
-
-myPen.circle(50)
-myPen.home()
-myPen.circle(100)
-myPen.home()
-myPen.circle(150)
-myPen.home()
 myPen.circle(200)
+myPen.penup()
+myPen.home()
+myPen.goto(100, 100)
+
+myPen.pendown()
+myPen.circle(150)
+myPen.penup()
+myPen.home()
+myPen.goto(75, 75)
+
+myPen.circle(100)
+myPen.pendown()
+myPen.home()
+myPen.penup()
+myPen.goto(50, 50)
+myPen.circle(50)
+myPen.pendown()
+myPen.home()
+
 
 # had to add this because when in VS when using turtle it  closes after program is ran
 turtle.exitonclick()
