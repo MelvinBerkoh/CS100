@@ -1,3 +1,5 @@
+import turtle
+
 '''
 Melvin Berkoh
 CS 100 Section 002
@@ -61,3 +63,53 @@ what line width? 25
 what line length? 100
 line, triangle or square? triangle
 '''
+# create turtle
+myScreen = turtle.Screen()  # always need to add a screen
+myScreen.bgcolor('white')  # set color of the background
+myScreen.screensize(900, 900)  # make screen a little larger
+myPen = turtle.Turtle()   # make a pen
+
+# Assign the user input to a variable
+shape = input("Pick a shape to draw NOTE: Either Triangle or Square  ")
+
+# condition to see which change was picked
+if shape.lower() == "triangle":
+
+    color = input("What is your favorite color?  ")  # ask color
+    # cast to int only need length for triangle
+    lineLength = int(input("Pick a line length for triangle  "))
+
+    # Creating an equilateral triangle
+    myPen.speed(3)  # slow down the pen moves to add
+    myPen.fillcolor(color)  # since color input is a string no need to cast
+    myPen.begin_fill()
+    myPen.forward(lineLength)
+    myPen.left(120)
+    myPen.forward(lineLength)
+    myPen.left(120)
+    myPen.forward(lineLength)
+    myPen.end_fill()
+    turtle.done()
+
+elif shape.lower() == "square":
+    # ask questions
+    color = input("What is your favorite color?  ")
+    lineWidth = int(input("Pick a line width for Square  "))  # cast to int
+    lineLength = int(input("Pick a line length for Square  "))  # cast to int
+
+    # Creating a square
+    myPen.fillcolor(color)
+    myPen.begin_fill()
+    myPen.forward(lineLength)
+    myPen.left(90)
+    myPen.forward(lineWidth)
+    myPen.left(90)
+    myPen.forward(lineLength)
+    myPen.left(90)
+    myPen.forward(lineWidth)
+    myPen.left(90)
+    myPen.end_fill()
+    turtle.done()
+
+else:
+    print("Did not input a given shape run program again :( ")
