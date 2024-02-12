@@ -7,16 +7,41 @@ HW 04, February 11, 2024
 
 '''
 1. Write Python code that does the following:
-a. Assigns the values 3, 4 and 5 to the variables a, b and c, respectively.
-b. Write an if statement that prints “OK” if a is less than b
-c. Write an if statement that prints “OK” if c is less than b
-d. Write an if statement that prints “OK” if the sum of a and b is equal to c
-e. Write an if statement that prints “OK” if the sum of a squared and b squared equals c squared.
 '''
+# a. Assigns the values 3, 4 and 5 to the variables a, b and c, respectively.
+
+a = 3
+b = 4
+c = 5
+#  Write an if statement that prints “OK” if a is less than b
+if a < b:
+    print("OK")
+#  Write an if statement that prints “OK” if c is less than b
+if c < b:
+    print("OK")
+#  Write an if statement that prints “OK” if the sum of a and b is equal to c
+if (a+b) == c:
+    print("OK")
+#  Write an if statement that prints “OK” if the sum of a squared and b squared equals c squared.
+
+if (a**2)+(b**2) == c**2:
+    print("OK")
 '''
 2. Repeat the previous problem with the additional requirement that “NOT OK” is printed if the
 condition is false.
 '''
+if a < b:
+    print("OK")
+#  Write an if statement that prints “OK” if c is less than b
+if c < b:
+    print("OK")
+#  Write an if statement that prints “OK” if the sum of a and b is equal to c
+if (a+b) == c:
+    print("OK")
+#  Write an if statement that prints “OK” if the sum of a squared and b squared equals c squared.
+
+if (a**2)+(b**2) == c**2:
+    print("OK")
 '''
 3. Write a program that asks the user for a color, a line width, a line length and a shape. Assume that
 the user will specify a shape that is either a line, a triangle, or a square. Use turtle graphics to draw
