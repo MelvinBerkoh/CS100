@@ -16,7 +16,7 @@ for month in months:
 # 2. Write a for loop that iterates over all of the integers in the range 0 through 99, inclusive, and prints
 # out all of those numbers that are divisible by both 2 and 5.
 for number in range(100):
-    if ((number % 2) == 0) and ((number % 5) == 0):
+    if (number % (5*2) == 0):
         print(number)
 
 # 3. Consider the strings created by these assignment statements:
