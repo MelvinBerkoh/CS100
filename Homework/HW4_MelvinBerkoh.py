@@ -75,31 +75,31 @@ shape = input("Pick a shape to draw NOTE: Either Triangle or Square  ")
 # condition to see which change was picked
 if shape.lower() == "triangle":
 
-    color = input("What is your favorite color?  ")  # ask color
+    color = input("What is your color?  ")  # ask color
     # cast to int only need length for triangle
+    lineWidth = int(input("Pick a line width? "))
     lineLength = int(input("Pick a line length for triangle  "))
 
     # Creating an equilateral triangle
+    myPen.width(lineWidth)
     myPen.speed(3)  # slow down the pen moves to add
-    myPen.fillcolor(color)  # since color input is a string no need to cast
-    myPen.begin_fill()
+    myPen.pencolor(color)
     myPen.forward(lineLength)
     myPen.left(120)
     myPen.forward(lineLength)
     myPen.left(120)
     myPen.forward(lineLength)
-    myPen.end_fill()
     turtle.done()
 
 elif shape.lower() == "square":
     # ask questions
-    color = input("What is your favorite color?  ")
+    color = input("What is your color?  ")
     lineWidth = int(input("Pick a line width for Square  "))  # cast to int
     lineLength = int(input("Pick a line length for Square  "))  # cast to int
 
     # Creating a square
-    myPen.fillcolor(color)
-    myPen.begin_fill()
+    myPen.width(lineWidth)
+    myPen.pencolor(color)
     myPen.forward(lineLength)
     myPen.left(90)
     myPen.forward(lineWidth)
@@ -108,7 +108,6 @@ elif shape.lower() == "square":
     myPen.left(90)
     myPen.forward(lineWidth)
     myPen.left(90)
-    myPen.end_fill()
     turtle.done()
 
 else:
