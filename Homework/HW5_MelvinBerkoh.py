@@ -27,3 +27,16 @@ for month in months:
 for number in range(100):
     if ((number % 2) == 0) and ((number % 5) == 0):
         print(number)
+
+# 3. Consider the strings created by these assignment statements:
+# horton = "A person's a person, no matter how small."
+# vowels = "aeiouAEIOU"
+# Write a for loop that prints out all the vowels in horton in the order they appear in horton.
+horton = "A person's a person, no matter how small."
+vowels = "aeiouAEIOU"
+
+for letter in horton:
+    if letter in vowels:
+        print(letter)
+    else:
+        continue
