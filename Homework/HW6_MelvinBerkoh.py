@@ -23,7 +23,7 @@ def isDivisible(maxInt, twoInts):
     # maxInt (not including maxInt) that are divisible of both ints in twoInts.
     lstOfInts = []
     for number in range(maxInt):
-        if (number % (twoInts[0]*twoInts[1]) == 0):
+        if (number % twoInts[0] == 0) and (number % twoInts[1] == 0):
             lstOfInts.append(number)
 
     return lstOfInts
