@@ -1,4 +1,4 @@
-
+import turtle
 '''
 Define a function named isPassingScore that takes two inputs, the passing score and the
 student exam score. The function returns True if the student score is the same or better than
@@ -40,3 +40,41 @@ def getMinValue(nums):
     nums.sort()
     return nums[0]
 
+
+# test cases for getMinValue
+print(getMinValue([13, 22, 37, 41, 5]))
+print(getMinValue([50, 44, 32, 2, 10]))
+print(getMinValue([10, 3, 24, 51, 4]))
+
+
+'''
+4. Define a function named drawPolygon that takes the following parameters:
+a. t – turtle
+b. numSides – number of sides for the regular polygon
+c. sideLength – length of each side
+It draws the polygon with the given parameters. Make no assumption about turtle state or
+position. It should draw counterclockwise.
+Hint – for a regular polygon with n sides, the exterior angle is 360/n
+'''
+
+
+def drawPolygon(t, numSides, sideLength):
+    '''It draws the polygon with the given parameters.'''
+    myScreen = turtle.Screen()
+    myScreen.screensize(900, 900)
+    t = turtle.Turtle()
+    for sides in range(numSides+1):
+        if numSides >= 3:
+            t.forward(sideLength)
+            t.left(360 / numSides)
+            sides = sides + 1
+        else:
+            message = "Number of sides must be greater than 2"
+            return message
+    t.reset()
+
+
+# create test cases for drawPolygon
+drawPolygon(turtle.Turtle(), 3, 100)
+drawPolygon(turtle.Turtle(), 4, 100)
+drawPolygon(turtle.Turtle(), 5, 100)
