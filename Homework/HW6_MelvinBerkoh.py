@@ -3,21 +3,6 @@ Melvin Berkoh
 CS 100 Section 002
 HW 06, February 17, 2024
 '''
-''''
-Write a function named
-hasFinalLetter that takes two parameters
-1.
-strList, a list of non-empty strings
-2.
-letters, a string of upper and/or lower case letters
-The function hasFinalLetter should create and return a list of all the strings in strList that end with a letter in letters.
-b. Create three test cases, each consisting of a list of non-empty strings and a string of upper
-and/or lower case letters, for your function in Problem 1a. One of these tests should return
-the empty list. For each test case write two assignment statements and a function call that
-pass the test arguments to your function.
-
-'''
-
 
 def hasFinalLetter(strList, letters):
     ''' takes a list of strings and letter to match at the last index of each word in the string list'''
@@ -49,6 +34,7 @@ def isDivisible(maxInt, twoInts):
     return lstOfInts
 
 
+# test cases
 print(isDivisible(28, (2, 4)))
 print(isDivisible(100, (5, 10)))
 print(isDivisible(32, (4, 8)))
