@@ -1,17 +1,4 @@
-'''
 
-
-
-
-4. Define a function named drawPolygon that takes the following parameters:
-a. t – turtle
-b. numSides – number of sides for the regular polygon
-c. sideLength – length of each side
-It draws the polygon with the given parameters. Make no assumption about turtle state or
-position. It should draw counterclockwise.
-Hint – for a regular polygon with n sides, the exterior angle is 360/n
-
-'''
 '''
 Define a function named isPassingScore that takes two inputs, the passing score and the
 student exam score. The function returns True if the student score is the same or better than
@@ -44,6 +31,12 @@ def totalPassingScores(passingScore, studentScores):
 
 
 '''
-3. Define a function named getMinValue that takes a list of numbers as input and returns the
-minimum value from the list. Hint – use for loop and if statements
+3. Define a function named getMinValue that  Hint – use for loop and if statements
 '''
+
+
+def getMinValue(nums):
+    ''' takes a list of numbers as input and returns the minimum value from the list'''
+    nums.sort()
+    return nums[0]
+
