@@ -37,10 +37,17 @@ def totalPassingScores(passingScore, studentScores):
 
 def getMinValue(nums):
     ''' takes a list of numbers as input and returns the minimum value from the list'''
-    nums.sort()
+    nums.sort()     # this sorts the list in numerical order
     return nums[0]
 
 
+# def getMinValue(nums):
+#     ''' takes a list of numbers as input and returns the minimum value from the list'''
+#     minValue = nums[0]
+#     for number in nums:
+#         if number < minValue:
+#             minValue = number
+#     return minValue
 # test cases for getMinValue
 print(getMinValue([13, 22, 37, 41, 5]))
 print(getMinValue([50, 44, 32, 2, 10]))
@@ -57,12 +64,13 @@ position. It should draw counterclockwise.
 Hint – for a regular polygon with n sides, the exterior angle is 360/n
 '''
 
+myScreen = turtle.Screen()
+myScreen.screensize(900, 900)
+t = turtle.Turtle()
+
 
 def drawPolygon(t, numSides, sideLength):
     '''It draws the polygon with the given parameters.'''
-    myScreen = turtle.Screen()
-    myScreen.screensize(900, 900)
-    t = turtle.Turtle()
     for sides in range(numSides+1):
         if numSides >= 3:
             t.forward(sideLength)
@@ -75,6 +83,6 @@ def drawPolygon(t, numSides, sideLength):
 
 
 # create test cases for drawPolygon
-drawPolygon(turtle.Turtle(), 3, 100)
-drawPolygon(turtle.Turtle(), 4, 100)
-drawPolygon(turtle.Turtle(), 5, 100)
+drawPolygon(t, 3, 100)
+drawPolygon(t, 4, 100)
+drawPolygon(t, 5, 100)
