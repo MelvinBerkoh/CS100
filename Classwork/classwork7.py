@@ -71,7 +71,7 @@ t = turtle.Turtle()
 
 def drawPolygon(t, numSides, sideLength):
     '''It draws the polygon with the given parameters.'''
-    for sides in range(numSides+1):
+    for sides in range(numSides):
         if numSides >= 3:
             t.forward(sideLength)
             t.left(360 / numSides)
