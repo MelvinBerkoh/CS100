@@ -19,6 +19,7 @@ CS 100 Section 002
 HW 07, February 22, 2024
 '''
 
+import string
 theBells = '''
 HEAR the sledges with the bells,
 Silver bells!
@@ -199,7 +200,6 @@ Come quickly to my veins and to my mouth.
 Speak through my speech, and through my blood. 
 '''
 
-import string
 
 def litCricFriend(wordList, text):
     ''' The Literary Critic's Friend helps the humanities scholar
@@ -213,11 +213,13 @@ def litCricFriend(wordList, text):
     # PROBLEM 1. Write a string method call that lower cases all
     # of the characters in text. One line of code. Hint: assign the
     # lower-cased text to a new variable name.
+    def lowerCase(text):
+        return text.lower()
 
     # PROBLEM 2. Write a string method call that replaces every
-    # m-dash ('--') in the lower-cased text with a space (' '). 
+    # m-dash ('--') in the lower-cased text with a space (' ').
     # One line of code.
-    
+
     # PROBLEM 3. Write a string method call that splits text into a
     # list of words (after they have been lower-cased, and the
     # m-dashes removed). One line of code.
@@ -252,7 +254,7 @@ def litCricFriend(wordList, text):
 # differently? Do the results show that Poe and Neruda use 'the'
 # differently?
 
+
 '''
 Put your answer to PROBLEM 8 here.
 '''
-
