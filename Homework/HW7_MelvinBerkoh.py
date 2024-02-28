@@ -8,11 +8,6 @@ You should submit this .py file with the blanks filled
 in. Problem 8 should be answered as a triple quoted
 comment after the code.
 '''
-
-'''
-PROBLEM 0. Put your name and assignment information here.
-'''
-
 '''
 Melvin Berkoh
 CS 100 Section 002
@@ -257,8 +252,12 @@ def litCricFriend(wordList, text):
 
 # >>> bellsAAnFrequency 0.07265587064676617.
 
-# (That is a made-up number.) Each function call takes one line.
 
+# (That is a made-up number.) Each function call takes one line.
+print('bellsAAnFrequency:', litCricFriend(['a', 'an'], theBells))
+print('CantoAAnFrequency:',litCricFriend(['a', 'an'], cantoXII))
+print('bellsTheFrequency:',litCricFriend(['the'], theBells))
+print('CantoTheFrequency:',litCricFriend(['the'], cantoXII))
 # PROBLEM 8. Do the results show that Poe and Neruda use 'a' and 'an'
 # differently? Do the results show that Poe and Neruda use 'the'
 # differently?
