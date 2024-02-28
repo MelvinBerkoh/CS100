@@ -225,12 +225,16 @@ def litCricFriend(wordList, text):
     # list of words (after they have been lower-cased, and the
     # m-dashes removed). One line of code.
     listOfWords = updatedText.split()
-    
+
     # PROBLEM 4. Write a loop that creates a new word list, using a
     # string method to strip the words from the list created in Problem 3
     # of all leading and trailing punctuation. Hint: the string library,
     # which is imported above, contains a constant named punctuation.
     # Three lines of code.
+    newList = []
+    for word in listOfWords:
+        strippedWord = word.strip(string.punctuation)
+        newList.append(strippedWord)
 
     # PROBLEM 5. Write a loop that sums the number of times that the
     # words in wordList occur in the list from Problem 4. Hint 1: you
