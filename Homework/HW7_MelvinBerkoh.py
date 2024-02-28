@@ -233,19 +233,22 @@ def litCricFriend(wordList, text):
     # Three lines of code.
     newList = []
     for word in listOfWords:
-        strippedWord = word.strip(string.punctuation)
-        newList.append(strippedWord)
+        newList.append(word.strip(string.punctuation))
 
     # PROBLEM 5. Write a loop that sums the number of times that the
     # words in wordList occur in the list from Problem 4. Hint 1: you
     # can use a list method to do the counting. Hint 2: lower case the
     # words in wordList. Between three and five lines of code. (It
     # depends on your coding style -- various styles are OK.)
+    count = 0
+    for word in wordList:
+        count += newList.count(word.lower())
 
     # PROBLEM 6. Calculate the ratio of the number from Problem 5
     # to the number of words in text. Return this ratio. Between one
     # and three lines of code. (It depends on your coding style --
     # various styles are OK.)
+    return (count/len(listOfWords))
 
 # PROBLEM 7. Call litCricFriend() four times to find the frequency
 # of the indefinite articles 'a' and 'an' and the definite article
