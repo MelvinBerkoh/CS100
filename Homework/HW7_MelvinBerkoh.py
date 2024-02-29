@@ -264,5 +264,7 @@ print('CantoTheFrequency:',litCricFriend(['the'], cantoXII))
 
 
 '''
-Put your answer to PROBLEM 8 here.
+The results show that Poe uses a and an a lot more than Neruda the frequency is 0.03482587064676617 for Poe compare to 0.009615384615384616 for Neruda
+The results show that Poe uses the a lot more than Neruda the frequency is 0.13598673300165837 for Poe compare to 0.05448717948717949for Neruda
+
 '''
