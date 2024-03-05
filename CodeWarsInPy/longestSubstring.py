@@ -27,7 +27,7 @@ def longest(st):
     result = ''
     for i in range(0, len(st)):
         if st[i] > st[i+1]:
-            result = result + st[i]xb
+            result = result + st[i]
     print(result)
 
 
