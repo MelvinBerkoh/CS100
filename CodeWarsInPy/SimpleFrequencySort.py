@@ -4,11 +4,12 @@ def highestFreq(arr):
     highestFrequency = ''
     counter = 0
     newList = []
-    for letter in arr:
-        if arr.count(letter) > counter:
-            highestFrequency = letter
-            counter = arr.count(letter)
+    for num in arr:
+        if arr.count(num) > counter:
+            highestFrequency = num
+            counter = arr.count(num)
+    newList
     return highestFrequency
 
 
-print(highestFreq('aahhbbbbyyyyyyy'))
+print(highestFreq([2, 3, 5, 3, 7, 9, 5, 3, 7]))
