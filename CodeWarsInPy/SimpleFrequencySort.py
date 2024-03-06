@@ -8,8 +8,9 @@ def highestFreq(arr):
         if arr.count(num) > counter:
             highestFrequency = num
             counter = arr.count(num)
-    newList
-    return highestFrequency
+        arr.remove(num)
+    newList.append(highestFrequency)
+    return newList
 
 
 print(highestFreq([2, 3, 5, 3, 7, 9, 5, 3, 7]))
