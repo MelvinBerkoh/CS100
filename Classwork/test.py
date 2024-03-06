@@ -13,5 +13,4 @@ c = []
 for letter in range(len(lst)):
     if str(letter) in vowels:
         c.append(letter)
-
 print(c)
