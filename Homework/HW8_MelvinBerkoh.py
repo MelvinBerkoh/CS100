@@ -24,12 +24,15 @@ Enter a word beginning with B please: banana
 def twoWords(number, letter):
     result = []
     # ask user question cast number to str and keep letter as string
-    question1 = input('Enter a'+str(number)+'-letter word please: ')
+    question1 = input('Enter a '+str(number)+'-letter word please: ')
     while (len(question1) != number):
-        question1 = input('Enter a'+str(number)+'-letter word please: ')
+        question1 = input('Enter a '+str(number)+'-letter word please: ')
     result.append(question1)
-    question2 = input('Enter a word beginning with' + letter+'please: ')
-    while (question2[0] != letter):
-        question2 = input('Enter a word beginning with' + letter+'please: ')
+    question2 = input('Enter a word beginning with ' + letter + ' please: ')
+    while ((question2[0] != letter) and (question2[0].lower() != letter)):
+        question2 = input('Enter a word beginning with ' + letter+' please: ')
     result.append(question2)
     return result
+
+
+print(twoWords(4, 'B'))
