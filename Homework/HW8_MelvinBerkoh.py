@@ -35,14 +35,16 @@ def twoWords(number, letter):
     while (True):
         if (len(question1) != number):
             question1 = input('Enter a '+str(number)+'-letter word please: ')
-        break
+        else:
+            break
     result.append(question1)
     question2 = input('Enter a word beginning with ' + letter + ' please: ')
     while (True):
         if ((question2[0] != letter) and (question2[0] != letter.lower())):
             question2 = input(
                 'Enter a word beginning with ' + letter+' please: ')
-        break
+        else:
+            break
     result.append(question2)
     return result
 
