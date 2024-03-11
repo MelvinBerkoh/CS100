@@ -1,4 +1,10 @@
 '''
+Melvin Berkoh
+CS 100 Section 002
+HW 08, March 07, 2024
+'''
+
+'''
 This problem provides practice using a while True loop.
 Write a function named twoWords that gets and returns two words from a user. The first word is of a
 specified length, and the second word begins with a specified letter.
@@ -23,13 +29,14 @@ Enter a word beginning with B please: banana
 
 def twoWords(number, letter):
     result = []
+    # make sure to edit this before submitting due to not using breaks 
     # ask user question cast number to str and keep letter as string
     question1 = input('Enter a '+str(number)+'-letter word please: ')
     while (len(question1) != number):
         question1 = input('Enter a '+str(number)+'-letter word please: ')
     result.append(question1)
     question2 = input('Enter a word beginning with ' + letter + ' please: ')
-    while ((question2[0] != letter) and (question2[0].lower() != letter)):
+    while ((question2[0] != letter) and (question2[0] != letter.lower())):
         question2 = input('Enter a word beginning with ' + letter+' please: ')
     result.append(question2)
     return result
