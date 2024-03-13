@@ -5,14 +5,16 @@
 # reapeat for all elements in the list
 def highestFreq(arr):
     #  create dictionary to hold key as the number and count as the value
-    values = {}
-    accountedValues = []
+    counterDict = {}
+    # return result
+    sortedValues = []
+    # loop through list 
     for num in arr:
-        if num not in accountedValues:
-            accountedValues.append(num)
-            frequency = arr.count(num)
-            values[num] = frequency
-    return values
-
-
+      # if that number is account for add one to value
+        if num in counterDict:
+            counterDict[num] +=1
+        else:
+          # if number is not accounted for intialize the key and value
+          counterDict[num] = 1
+    c
 print(highestFreq([2, 3, 5, 3, 7, 9, 5, 3, 7]))
