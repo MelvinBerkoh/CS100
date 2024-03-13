@@ -4,19 +4,24 @@
 # with that highest frequecny number we want to add that to the new list as the count of that number
 # reapeat for all elements in the list
 def highestFreq(arr):
-    highestFrequency = ''
+    highestCount = ''
     counter = 0
+  #  list to hold the result
     newList = []
+    # list so that we dont loop twice
+    accountForNumber = []
+    # loop through all the elments of the array/list
     for num in arr:
-    #     if num in newList:
-    #         continue
-    #     else:
-    #         if arr.count(num) > counter:
-    #             counter = arr.count(num)
-    #             highestFrequency += str(num)
-    # newList.append(highestFrequency)
-
-    #     arr.remove(num)
+        if num not in accountForNumber:
+            accountForNumber.append(num)
+        # get the count of each element in list
+            frequency = arr.count(num)
+            # determine the number with the highest count
+            for i in range(frequency):
+                # add that count to the new list
+                newList.append(num)
+            # sort list in decreasing order
+    newList.sort(reverse=True)
 
     return newList
 
