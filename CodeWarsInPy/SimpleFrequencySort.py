@@ -6,7 +6,7 @@ def highestFreq(arr):
     value = collections.Counter(arr)
     arr.sort(key=lambda x: (-value[x], x))
     return arr
-lambda
+
 
 print(highestFreq([2, 3, 5, 3, 7, 9, 5, 3, 7]))
 1+2
