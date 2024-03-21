@@ -1,4 +1,11 @@
 '''
+Melvin Berkoh
+CS 100 Section 002
+HW 02, February 01, 2024
+
+'''
+
+'''
 Problem 1
 Write a function
 file_copy that takes two string parameters (

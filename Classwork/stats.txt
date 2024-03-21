@@ -1,0 +1,2 @@
+The number of characters is: 23
+The number of words is: 1
