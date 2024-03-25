@@ -50,3 +50,27 @@ def twoWords(number, letter):
 
 
 print(twoWords(4, 'B'))
+
+
+# Problem 2
+
+def twoWordsV2(number, letter):
+    result = []
+
+    # ask user question cast number to str and keep letter as string
+    question1 = input('Enter a '+str(number)+'-letter word please: ')
+    while (len(question1) != number):
+
+        question1 = input('Enter a '+str(number)+'-letter word please: ')
+
+    result.append(question1)
+
+    question2 = input('Enter a word beginning with ' + letter + ' please: ')
+    while ((question2[0] != letter) and (question2[0] != letter.lower())):
+        question2 = input('Enter a word beginning with ' + letter+' please: ')
+
+    result.append(question2)
+    return result
+
+
+print(twoWordsV2(4, 'B'))
