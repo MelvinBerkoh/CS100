@@ -49,10 +49,17 @@ def twoWords(number, letter):
     return result
 
 
-print(twoWords(4, 'B'))
+# print(twoWords(4, 'B'))
 
 
 # Problem 2
+'''
+Write a function named twoWordsV2 that has the same specification as Problem 1, but implement it
+using while and not using break. (Hint: provide a different boolean condition for while.)
+Since only the implementation has changed, and not the specification, for a given input the output should
+be identical to the output in Problem 1
+'''
+
 
 def twoWordsV2(number, letter):
     result = []
@@ -73,4 +80,31 @@ def twoWordsV2(number, letter):
     return result
 
 
-print(twoWordsV2(4, 'B'))
+# print(twoWordsV2(4, 'B'))
+
+# problem 3
+'''
+Write a function named enterNewPassword. This function takes no parameters. It prompts the user to
+enter a password until the entered password has 8-15 characters, including at least one digit. Tell the
+user whenever a password fails one or both of these tests.
+'''
+
+
+def enterNewPassword():
+    password = input(
+        'Please enter a password that has 8-15 characters, including at least one digit')
+    # what we want is to first compare the length of the password to make sure its withen range
+
+    while (True):
+        if (8 <= len(password) >= 15):
+            for char in password:
+                if char.isdigit():
+                    print('Password accepted!')
+                    break
+            print('The password you entered does not contain a digit')
+        else:
+            print('The password you entered is not between 8-15 characters :(')
+            break
+
+
+enterNewPassword()
