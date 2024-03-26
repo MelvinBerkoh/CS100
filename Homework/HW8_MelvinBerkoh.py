@@ -49,7 +49,7 @@ def twoWords(number, letter):
     return result
 
 
-# print(twoWords(4, 'B'))
+print(twoWords(4, 'B'))
 
 
 # Problem 2
@@ -80,7 +80,7 @@ def twoWordsV2(number, letter):
     return result
 
 
-# print(twoWordsV2(4, 'B'))
+print(twoWordsV2(4, 'B'))
 
 # problem 3
 '''
@@ -114,7 +114,7 @@ def enterNewPassword():
         break  # Exit the loop since the password is accepted
 
 
-# enterNewPassword()
+enterNewPassword()
 '''
 Implement the GuessNumber game. In this game, the computer
 • Think of a random number in the range 0-50. (Hint: use the random module.)
