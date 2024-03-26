@@ -92,19 +92,65 @@ user whenever a password fails one or both of these tests.
 
 def enterNewPassword():
     password = input(
-        'Please enter a password that has 8-15 characters, including at least one digit')
-    # what we want is to first compare the length of the password to make sure its withen range
+        'Please enter a password that has 8-15 characters, including at least one digit: ')
+    # what we want is to first compare the length of the password to make sure its withe range
 
     while (True):
-        if (8 <= len(password) >= 15):
-            for char in password:
-                if char.isdigit():
-                    print('Password accepted!')
-                    break
-            print('The password you entered does not contain a digit')
-        else:
+        # if the password entered is not within the given range repeat the prompt
+        if ((len(password) < 8) or (len(password) > 15)):
             print('The password you entered is not between 8-15 characters :(')
+            password = input(
+                'Please enter a password that has 8-15 characters, including at least one digit: ')
+            continue  # Restart the loop if the password is not within the range
+    # Check for the presence of at least one digit
+        digit = any(char.isdigit() for char in password)
+        if not digit:
+            print('The password you entered does not contain a digit :(')
+            password = input(
+                'Please enter a password that has 8-15 characters, including at least one digit: ')
+            continue  # Restart the loop if there is no digit in the password
+        # If both conditions are met, password is accepted
+        print('Password accepted!')
+        break  # Exit the loop since the password is accepted
+
+
+# enterNewPassword()
+'''
+Implement the GuessNumber game. In this game, the computer
+• Think of a random number in the range 0-50. (Hint: use the random module.)
+• Repeatedly prompt the user to guess the mystery number.
+• If the guess is correct, congratulate the user for winning. If the guess is incorrect, let the user know if
+the guess is too high or too low.
+• After 5 incorrect guesses, tell the user the right answer.
+The following is an example of correct input and output.
+I'm thinking of a number in the range 0-50. You have five tries to guess it.
+Guess 1? 32
+32 is too high
+Guess 2? 18
+18 is too low
+Guess 3? 24
+You are right! I was thinking of 24!
+
+'''
+
+
+def guessNumber(num):
+    print(
+        'I am thinking of a number in the range 0-50. You have five tries to guess it.')
+    counter = 0
+    while (counter < 5):
+        counter += 1
+        guess = input('Guess '+str(counter) + '?')
+        if (num > int(guess)):
+            print(guess + ' is too low')
+        elif (num < int(guess)):
+            print(guess + ' is too high')
+        else:
+            print('You are right! I was thinking of ' + guess + '!')
             break
 
 
-enterNewPassword()
+# testCases
+guessNumber(-24)
+print(guessNumber(10))
+print(guessNumber(30))
