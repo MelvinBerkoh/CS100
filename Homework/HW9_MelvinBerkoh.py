@@ -1,18 +1,5 @@
 '''
-Problem 1
-Write a function
-file_copy that takes two string parameters (
-in_file and
-out_file) and copies the content of
-in_file into
-out_file. Assume that
-in_file exists before
-file_copy is called. For example, the following would be
-correct input and output:
->>> file_copy('created_equal.txt', 'copy.txt')
->>> copy_f = open('copy.txt')
->>> copy_f.read()
-'We hold these truths to be self-evident,\nthat all men are created equal\n'
+
 Problem 2
 Write a function named
 file_stats that takes one string parameter (
@@ -59,3 +46,29 @@ sit
 Hint: Be sure to test your solution with input in which some repeated words on a line are a mixture of upper
 and lower case, and in which repeated words sometimes are preceded or followed by punctuation
 '''
+
+
+'''
+Problem 1
+'''
+
+
+def file_copy(in_file, out_file):
+    '''
+    Takes two string parameters (in_file and out_file) and copies the content of
+    in_file into out_file. NOTE: Function doesn't return anything so the return type is none
+    '''
+    file1 = open(in_file, 'r')  # opens file as saves it as file 1
+    output = ''  # string to hold the data from file1
+
+    # loop through the file by line and copy the contents into the output variable
+    for line in file1:
+        output += str(line)
+
+    file1.close()
+    file2 = open(out_file, 'w')  # open second file for writing
+    file2.write(output)    # append the data
+    file2.close()
+
+
+print(file_copy('Homework/test.txt', 'Homework/output.txt'))   # test case
