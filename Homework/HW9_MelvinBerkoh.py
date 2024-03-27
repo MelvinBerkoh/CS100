@@ -1,19 +1,4 @@
 '''
-
-Problem 2
-Write a function named
-file_stats that takes one string parameter (
-in_file) that is the name of an existing
-text file. The function
-file_stats should calculate three statistics about in_file: the number of lines it
-contains, the number of words and the number of characters, and print the three statistics on separate
-lines. For example, the following would be correct input and output:
->>> file_stats('created_equal.txt')
-lines 2
-words 13
-characters 72
-Note: The number of characters may vary slightly between operating systems. Similarly, the number of lines
-may vary by 1 line, depending on the method used to calculate it.
 Problem 3
 Write a function named
 repeat_words that takes two string parameters:
@@ -51,8 +36,6 @@ and lower case, and in which repeated words sometimes are preceded or followed b
 '''
 Problem 1
 '''
-
-
 def file_copy(in_file, out_file):
     '''
     Takes two string parameters (in_file and out_file) and copies the content of
@@ -71,4 +54,32 @@ def file_copy(in_file, out_file):
     file2.close()
 
 
-print(file_copy('Homework/test.txt', 'Homework/output.txt'))   # test case
+# print(file_copy('Homework/test.txt', 'Homework/output.txt'))   # test case
+
+'''
+Problem 2
+'''
+def file_stats(in_file):
+    '''
+    Function takes one string parameter (in_file) that is the name of an existing text file. The function
+    file_stats should calculate three statistics about in_file: the number of lines it contains, the number of words and the number of characters,
+    and print the three statistics on separate lines
+    '''
+    file1 = open(in_file, 'r')                            # open the file
+    
+    readFile = file1.read()                             # read method reads the whole file and returns a string version of it
+    
+    numberOfChar = len(readFile)                       # to calc the number of characters it would be the length of that variable (readFile)
+    
+    numberOfLines = len(readFile.split('\n'))        # since strings are immutable you can use this logic to get the number of lines by splitting by the newline character
+    
+    numberOfWords = len(readFile.split(' '))        # again immutable so can use the same logic this time splitting by the space 
+   
+    finalStr = 'The number of words in the given file : ' + \
+        str(numberOfWords)+'\n' + 'The number of characters in the given file: ' + \
+        str(numberOfChar)+'\n' + \
+        'The number of lines in the given file: ' + str(numberOfLines)
+    return finalStr
+
+
+print(file_stats('Homework/test.txt')) # test case
