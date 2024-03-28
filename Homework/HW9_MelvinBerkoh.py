@@ -1,6 +1,9 @@
 '''
-
+Melvin Berkoh
+CS 100 Section 002
+HW 09, March 27, 2024
 '''
+import string
 
 
 '''
@@ -64,49 +67,45 @@ print(file_stats('Homework/test.txt'))  # test case
 
 '''
 Problem 3
-Write a function named
-repeat_words that takes two string parameters:
-1.
-in_file: the name of an input file that exists before
-repeat_words is called
-2.
-out_file: the name of an output file that
-repeat_words creates
-Assume that the input file is in the current working directory and write the output file to that directory.
-For each line of the input file, the function
-repeat_words should write to the output file all of the words
-that appear more than once on that line. Each word should be lower cased and stripped of leading and
-trailing punctuation. Each repeated word on a line should be written to the corresponding line of the
-output file only once, regardless of the number of times the word is repeated.
-For example, if the following is the content of the file
-catInTheHat.txt:
-Too wet to go out and too cold to play ball.
-So we sat in the house.
-We did nothing at all.
-So all we could do was to Sit! Sit! Sit! Sit!
-The following function call:
-inF = 'catInTheHat.txt'
-outF = 'catRepWords.txt'
-repeat_words(inF, outF)
-should create the file
-catRepWords.txt with the content:
-too to
-sit
-Hint: Be sure to test your solution with input in which some repeated words on a line are a mixture of upper
-and lower case, and in which repeated words sometimes are preceded or followed by punctuation
 '''
 
 
 def repeat_words(in_file, out_file):
-    file1 = in_file.open('r')
-    lst = file1.readlines()
-    
-    for item in lst:
-     highestCount = 0
-     
-     for word in item:
-       if word.count() > highestCount:
-         highestCount = word.count()
-         mostFrequentWord = word
-         
-        
+    '''
+    For each line of the input file, the function repeat_words should write to the output file all of the words
+    that appear more than once on that line. Each word should be lower cased and stripped of leading and
+    trailing punctuation. Each repeated word on a line should be written to the corresponding line of the
+    output file only once, regardless of the number of times the word is repeated.
+    '''
+    # Open input file for reading
+    file1 = open(in_file, 'r')
+    lines = file1.readlines()
+
+    # Open output file for writing
+    file2 = open(out_file, 'w')
+    # Iterate over each line in the input file
+    for line in lines:
+        line = line.lower().strip()  # Convert to lowercase and remove leading/trailing spaces
+        line = line.translate(str.maketrans(
+            '', '', string.punctuation))  # Remove punctuation
+        words = line.split()  # Split the line into words
+
+        # Create a list to store repeated words in the current line
+        repeated_words = []
+        # Iterate over each word in the line
+        for word in words:
+            # Check if the word is repeated and not already written to output file
+            if words.count(word) > 1 and word not in repeated_words:
+             # Write the repeated word to output file
+                file2.write(word + ' ')
+            # Add the word to the list of repeated words
+                repeated_words.append(word)
+                # Write newline to separate lines in output file
+                file2.write('\n')
+
+    file1.close()
+    file2.close()
+
+
+# test case
+print(repeat_words('Homework/test.txt', 'Homework/output.txt'))
