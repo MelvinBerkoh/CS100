@@ -36,12 +36,7 @@ print(initialLetterCount(['I', 'say', 'what', 'I', 'mean', 'A',
 
 Problem 2
 Write a function named
-initialLetters that takes one parameter,
-wordList – a list of words. Create and return
-a dictionary in which each initial letter of a word in
-wordList is a key and the corresponding value is a list
-of the words in
-wordList that begin with that letter. There should be no duplicate words in any value in the
+initialLetters that  There should be no duplicate words in any value in the
 dictionary.
 For example, the following is correct output:
 print(initialLetters(horton))
@@ -51,6 +46,10 @@ print(initialLetters(horton))
 
 
 def initialLetters(wordList):
+    '''
+    Takes one parameter,wordList – a list of words. Create and return a dictionary in which each initial letter of a word in
+    wordList is a key and the corresponding value is a list of the words in wordList that begin with that letter.
+    '''
     # create the dictionary
     result = {}
     # loop though the wordList
