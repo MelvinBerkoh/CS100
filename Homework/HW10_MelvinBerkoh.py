@@ -1,4 +1,7 @@
+'''
+Melvin Berkoh 
 
+'''
 
 '''
 Problem 1
@@ -54,6 +57,7 @@ def initialLetters(wordList):
     result = {}
     # loop though the wordList
     for word in wordList:
+
         # check to see if the first letter in the word we are looking at is in the dictionary
         if word[0] in result:
 
@@ -67,5 +71,5 @@ def initialLetters(wordList):
     return result
 
 
-print(initialLetters(['I', 'say', 'what', 'I', 'mean', 'A',
-                      'and', 'I', 'mean', 'what', 'I', 'say']))
+print(initialLetters(['In', 'say', 'what', 'I', 'mean', 'A',
+                      'and', 'I;lkjh', 'mean', 'what', 'I', 'say']))
