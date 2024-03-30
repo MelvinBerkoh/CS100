@@ -74,4 +74,4 @@ def initialLetters(wordList):
 
 
 print(initialLetters(['In', 'say', 'what', 'I', 'mean', 'A',
-                      'and', 'I;lkjh', 'mean', 'what', 'I', 'say']))
+                      'and', 'I', 'mean', 'what', 'I', 'say']))
