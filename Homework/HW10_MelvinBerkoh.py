@@ -59,7 +59,7 @@ def initialLetters(wordList):
     result = {}
     # loop though the wordList
     for word in wordList:
-
+        # make sure to change the value of the dictionary to be an array
         # check to see if the first letter in the word we are looking at is in the dictionary
         if word[0] in result:
 
