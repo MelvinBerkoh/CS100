@@ -57,17 +57,19 @@ def initialLetters(wordList):
     '''
     # create the dictionary
     result = {}
-    # loop though the wordList
+    # loop through the wordList
     for word in wordList:
-        # make sure to change the value of the dictionary to be an array
-        # check to see if the first letter in the word we are looking at is in the dictionary
-        if word[0] in result:
-
-            # if found add the word to the value of that key
-            result[word[0]] = word
+        # lowercase the initial letter of the word
+        initial_letter = word[0].lower()
+        # check if the initial letter is already a key in the dictionary
+        if initial_letter in result:
+            # check if the word is not already in the list associated with the key
+            if word not in result[initial_letter]:
+                # append the word to the list associated with the key
+                result[initial_letter].append(word)
         else:
-            # if the first letter of the word  isn't found create a key with the letter and make the value word
-            result[word[0]] = word
+            # if the initial letter is not a key, create a new key with an empty list as value
+            result[initial_letter] = [word]
 
     # return the dictionary
     return result
