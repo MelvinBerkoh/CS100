@@ -59,8 +59,8 @@ def initialLetters(wordList):
     result = {}
     # loop through the wordList
     for word in wordList:
-        # lowercase the initial letter of the word
-        initial_letter = word[0].lower()
+        # the initial letter of the word
+        initial_letter = word[0]
         # check if the initial letter is already a key in the dictionary
         if initial_letter in result:
             # check if the word is not already in the list associated with the key
@@ -93,3 +93,18 @@ print(shareOneLetter(horton))
 'and': ['say', 'what', 'mean', 'and']}
 
 '''
+
+
+def sharedOneLetter(wordList):
+    result = {}
+    # loop through word list
+    for word in wordList:
+        currentWord = word
+        for otherWords in wordList:
+            if currentWord.split() in otherWords:
+                result[word].append(otherWords)
+
+    return result
+
+
+print(sharedOneLetter(['hi', 'name', 'is', 'paul', 'is']))
