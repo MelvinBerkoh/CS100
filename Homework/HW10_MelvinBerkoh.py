@@ -77,3 +77,19 @@ def initialLetters(wordList):
 
 print(initialLetters(['In', 'say', 'what', 'I', 'mean', 'A',
                       'and', 'I', 'mean', 'what', 'I', 'say']))
+
+'''
+Write a function named
+shareOneLetter that takes one parameter,
+wordList – a list of words. Create and
+return a dictionary in which each word in
+wordList is a key and the corresponding value is a list of all the
+words in
+wordList that share at least one letter with that word. There should be no duplicate words in any
+value in the dictionary.
+For example, the following is correct output:
+print(shareOneLetter(horton))
+{'I': ['I'], 'say': ['say', 'what', 'mean', 'and'], 'what': ['say', 'what', 'mean', 'and'], 'mean': ['say', 'what', 'mean', 'and'],
+'and': ['say', 'what', 'mean', 'and']}
+
+'''
