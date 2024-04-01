@@ -80,13 +80,7 @@ print(initialLetters(['In', 'say', 'what', 'I', 'mean', 'A',
 
 '''
 Write a function named
-shareOneLetter that takes one parameter,
-wordList – a list of words. Create and
-return a dictionary in which each word in
-wordList is a key and the corresponding value is a list of all the
-words in
-wordList that share at least one letter with that word. There should be no duplicate words in any
-value in the dictionary.
+shareOneLetter that 
 For example, the following is correct output:
 print(shareOneLetter(horton))
 {'I': ['I'], 'say': ['say', 'what', 'mean', 'and'], 'what': ['say', 'what', 'mean', 'and'], 'mean': ['say', 'what', 'mean', 'and'],
@@ -96,17 +90,31 @@ print(shareOneLetter(horton))
 
 
 def sharedOneLetter(wordList):
+    '''
+    The function takes one parameter, wordList – a list of words. Create and return a dictionary in which each word in
+    wordList is a key and the corresponding value is a list of all the words in wordList that share at least one letter with that word. There should be no duplicate words in any
+    value in the dictionary
+     '''
     result = {}
     # loop through word list
     for word in wordList:
+        # check to see if the word is not already in the dictionary
         if word not in result:
+            # I am initial creating a key with the current word that we are looking at, the value is an empty array
             result[word] = []
+            # now looping through each letter in the word one by one
             for letter in word:
+                # now we are starting the loop for the words to matching by looping through the same array again
                 for otherWord in wordList:
+                    # if the letter is present in the other words variable or in the words list and the word is not already a value
                     if (letter in otherWord) and (otherWord not in result[word]):
+                        # append it to the empty array as the value
                         result[word].append(otherWord)
 
     return result
 
 
+# test case
 print(sharedOneLetter(['hi', 'name', 'is', 'paul', 'is']))
+print(sharedOneLetter(['In', 'say', 'what', 'I', 'mean', 'A',
+                      'and', 'I', 'mean', 'what', 'I', 'say']))
