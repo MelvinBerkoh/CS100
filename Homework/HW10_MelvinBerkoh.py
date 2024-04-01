@@ -100,16 +100,13 @@ def sharedOneLetter(wordList):
     # loop through word list
     for word in wordList:
         if word not in result:
-            result[word] = [word]
+            result[word] = []
             for letter in word:
                 for otherWord in wordList:
-                  if letter in otherWord:
-                     result[word].append(otherWord)
+                    if (letter in otherWord) and (otherWord not in result[word]):
+                        result[word].append(otherWord)
 
     return result
 
 
 print(sharedOneLetter(['hi', 'name', 'is', 'paul', 'is']))
-
-word = 'hi'
-print(word.split())
