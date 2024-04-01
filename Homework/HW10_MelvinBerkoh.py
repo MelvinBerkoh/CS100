@@ -38,15 +38,7 @@ print(initialLetterCount(['I', 'say', 'what', 'I', 'mean', 'A',
                           'and', 'I', 'mean', 'what', 'I', 'say']))
 
 '''
-
 Problem 2
-Write a function named
-initialLetters that  There should be no duplicate words in any value in the
-dictionary.
-For example, the following is correct output:
-print(initialLetters(horton))
-{'I': ['I'], 's': ['say'], 'w': ['what'], 'm': ['mean'], 'a': ['and']}
-
 '''
 
 
@@ -79,13 +71,7 @@ print(initialLetters(['In', 'say', 'what', 'I', 'mean', 'A',
                       'and', 'I', 'mean', 'what', 'I', 'say']))
 
 '''
-Write a function named
-shareOneLetter that 
-For example, the following is correct output:
-print(shareOneLetter(horton))
-{'I': ['I'], 'say': ['say', 'what', 'mean', 'and'], 'what': ['say', 'what', 'mean', 'and'], 'mean': ['say', 'what', 'mean', 'and'],
-'and': ['say', 'what', 'mean', 'and']}
-
+Problem 3 
 '''
 
 
