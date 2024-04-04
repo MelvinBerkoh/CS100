@@ -19,6 +19,25 @@ Dog object.
 'Sugar'
 >>> sugar.breed
 'border collie'
+'''
+
+
+class Dog:
+    '''
+    Dog gives each dog its own name and breed
+    '''
+
+# this is the constructor for a python class
+# self parameter
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def show(self):
+        print(self.name, self.breed)
+
+
+'''
 Problem 2
 Add a data attribute
 tricks of type
@@ -30,5 +49,4 @@ Dog instance. Make sure that you test this
 successfully.
 >>> sugar.tricks
 []
-
 '''
