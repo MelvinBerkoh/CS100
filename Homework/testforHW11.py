@@ -7,3 +7,5 @@ print(sugar.tricks)
 
 print(sugar.teach('frisbee'))
 print(sugar.tricks)
+
+print(sugar.knows('frisbee'))

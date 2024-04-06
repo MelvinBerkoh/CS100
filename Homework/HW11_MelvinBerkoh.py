@@ -47,18 +47,6 @@ tricks and print a message that the dog knows the trick'''
 
 
 '''
-Write a method
-knows as part of the class
-Dog. The method knows should check whether a passed string
-parameter is in the dog’s list of tricks, print an appropriate message and return 
-True or
-False.
->>> sugar.knows('frisbee')
-Yes, Sugar knows frisbee
-True
->>> sugar.knows('arithmetic')
-No, Sugar doesn't know arithmetic
-False
 Problem 5
 Create a class attribute
 species of type
