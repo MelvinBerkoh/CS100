@@ -30,31 +30,47 @@ class Dog:
         self.tricks = list(tricks)
 
     def teach(self, trick):
+        ''' The method
+teach should add a passed string parameter to
+tricks and print a message that the dog knows the trick'''
         self.tricks.append(trick)
         message = self.name + ' knows ' + trick
         return message
 
+    def knows(self, trickKnows):
+        if trickKnows in self.tricks:
+            message = 'Yes, ' + self.name + ' knows ' + trickKnows
+            return message + '\n True'
+        else:
+            message = 'No, ' + self.name + ' doesn\'t know ' + trickKnows
+            return message + '\n False'
+
 
 '''
-Problem 2
-Add a data attribute
-tricks of type
-list to each
-Dog instance and initialize it in
-__init__ to the empty list. The
-user does not have to supply a list of tricks when constructing a
-Dog instance. Make sure that you test this
-successfully.
->>> sugar.tricks
-[]
-'''
-'''
 Write a method
-teach as part of the class
-Dog. The method
-teach should add a passed string parameter to
-tricks and print a message that the dog knows the trick.
->>> sugar.teach('frisbee')
-Sugar knows frisbee
+knows as part of the class
+Dog. The method knows should check whether a passed string
+parameter is in the dog’s list of tricks, print an appropriate message and return 
+True or
+False.
+>>> sugar.knows('frisbee')
+Yes, Sugar knows frisbee
+True
+>>> sugar.knows('arithmetic')
+No, Sugar doesn't know arithmetic
+False
+Problem 5
+Create a class attribute
+species of type
+str to be shared by all instances of the class
+Dog and set its value to
+'canis familiaris'. The class attribute
+species should be defined within the class
+Dog but outside of any
+method.
+>>> dog.Dog.species
+'Canis familiaris'
+>>> sugar.species
+'Canis familiaris'
 
 '''
