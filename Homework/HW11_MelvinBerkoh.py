@@ -29,6 +29,11 @@ class Dog:
         self.breed = breed
         self.tricks = list(tricks)
 
+    def teach(self, trick):
+        self.tricks.append(trick)
+        message = self.name + ' knows ' + trick
+        return message
+
 
 '''
 Problem 2
@@ -42,4 +47,14 @@ Dog instance. Make sure that you test this
 successfully.
 >>> sugar.tricks
 []
+'''
+'''
+Write a method
+teach as part of the class
+Dog. The method
+teach should add a passed string parameter to
+tricks and print a message that the dog knows the trick.
+>>> sugar.teach('frisbee')
+Sugar knows frisbee
+
 '''
