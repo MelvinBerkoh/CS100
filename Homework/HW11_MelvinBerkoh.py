@@ -4,7 +4,6 @@ CS 100 Section 002
 HW 11 April 11, 2024
 '''
 
-
 class Dog:
     '''
     Dog gives each dog its own name, breed, and trick
