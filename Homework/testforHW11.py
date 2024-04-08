@@ -8,4 +8,5 @@ print(sugar.tricks)
 print(sugar.teach('frisbee'))
 print(sugar.tricks)
 
-print(sugar.knows('frisbee'))
+print(sugar.knows('hangman'))
+print(sugar.species)
