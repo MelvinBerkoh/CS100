@@ -4,18 +4,19 @@ CS 100 Section 002
 HW 11 April 11, 2024
 '''
 
+
 class Dog:
     '''
     Dog gives each dog its own name, breed, and trick
     '''
-
+    species = 'Canis familiaris'
 # this is the constructor for a python class
 # self parameter
+
     def __init__(self, name, breed, tricks):
         self.name = name
         self.breed = breed
         self.tricks = list(tricks)
-        self.species = 'Canis familiaris'
 
     def teach(self, trick):
         ''' The method

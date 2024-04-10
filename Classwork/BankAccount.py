@@ -42,7 +42,8 @@ class UserAccount:
         ''' returns the User ID of the customer '''
         return "User ID: " + self.id
 
-        # class Account:
+    class Account:
+        
         #     # hold id
         #     # blaance
         #     # customerName

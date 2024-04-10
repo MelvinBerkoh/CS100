@@ -9,5 +9,4 @@ print(sugar.teach('frisbee'))
 print(sugar.tricks)
 
 print(sugar.knows('hangman'))
-print(sugar.species)
-
+print(HW11_MelvinBerkoh.Dog.species)
