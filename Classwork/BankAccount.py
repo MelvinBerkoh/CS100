@@ -43,7 +43,8 @@ class UserAccount:
         return "User ID: " + self.id
 
     class Account:
-        
+        ''' Each user has their own bank account information'''
+
         #     # hold id
         #     # blaance
         #     # customerName
