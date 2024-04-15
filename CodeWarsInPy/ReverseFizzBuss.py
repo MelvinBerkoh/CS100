@@ -19,7 +19,7 @@ reverse_fizzbuzz("Fizz 688 689 FizzBuzz")  -->  [687, 688, 689, 690]
 reverse_fizzbuzz("Fizz Buzz")              -->  [9, 10]
 '''
 
-# note that the fizz is anything divisble by 3 and buzz is anything that is divisble by 5
+# note that the fizz is anything divisible by 3 and buzz is anything that is divisible by 5
 
 
 def reverse_fizzbuzz(str):
@@ -33,16 +33,16 @@ def reverse_fizzbuzz(str):
     for i in range(len(array)):
       # now we check for the key words
         if array[i] == 'Fizz':
-            result.append(int(array[i-1])+1)
+          # now we want to check if there is a number before and after the word fizz
 
-        elif arrry[i] == 'Buzz':
-
-        elif array[i] == 'FizzBuzz':
-
-        else:
-            result.append(array[i])
-
+          # if the index is 0 and the next word following is buzz we know that we have to add 5 to the results array
+            if i == 0 and array[i + 1] == 'Buzz':
+                result.append(5)
+            # if the index is 0 and the next word following is not buzz we know that we have to add 3 to the results array
+            elif i == 0 and array[i + 1] != 'Buzz':
+                result.append(3)
+            # if there is a number before and after the word fizz we have to
     return result
 
 
-reverse_fizzbuzz('hell this this work')
+print(reverse_fizzbuzz("1 2 Fizz 4 Buzz"))
