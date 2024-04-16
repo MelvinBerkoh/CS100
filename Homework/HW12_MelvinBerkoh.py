@@ -57,29 +57,34 @@ d. Print the final average to the console.
 e. Make use of the functions
 safeOpen() and
 safeFloat().
-For example, the following is correct input/output:
->>> inputFile = open('radar.txt')
->>> content = inputFile.read()
->>> print(content)
-35.2
-1.8
-65.6
-67.9z
-70.2
-73.2 a3.9 65.6 69.8
-6$4.9
-54.9
->>> inputFile.close()
->>>
->>> averageSpeed()
-Enter file name: ghost.txt
-File not found. Please try again.
-Enter file name: phantom.txt
-File not found. Yet another human error. Goodbye.
->>>
->>> averageSpeed()
->>> Enter file name: radar.txt
->>> Average speed is 62.07 miles per hour.
+
 >>>
 
 '''
+
+
+def averageSpeed():
+    '''  Function that calculates the average of the numbers in the file. '''
+    # prompt the user for the name of the file
+    fileName = input('Enter the name of the file: ')
+    attempts = 0
+    # check if the file exists
+    while safeOpen(fileName) == None:
+        attempts += 1
+        if attempts == 2:
+            print('You have exceeded the number of attempts')
+            break
+        fileName = input('Enter the name of the file: ')
+# now that we have the file opened we need to read from it line by line
+    file = safeOpen(fileName)
+    total = 0
+    count = 0
+    for line in file:
+        # split the line by space
+        for word in line.split():
+            # check if the word is a number
+            if safeFloat(word) > 2:
+                total += safeFloat(word)
+                count += 1
+    print('The average speed is: ', total/count)
+    file.close()
