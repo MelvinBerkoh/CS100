@@ -68,15 +68,16 @@ def averageSpeed():
     # prompt the user for the name of the file
     fileName = input('Enter the name of the file: ')
     attempts = 0
+    file = safeOpen(fileName)
     # check if the file exists
-    while safeOpen(fileName) == None:
+    while file == None:
         attempts += 1
         if attempts == 2:
             print('You have exceeded the number of attempts')
             break
         fileName = input('Enter the name of the file: ')
 # now that we have the file opened we need to read from it line by line
-    file = safeOpen(fileName)
+
     total = 0
     count = 0
     for line in file:
