@@ -61,6 +61,7 @@ safeFloat().
 >>>
 
 '''
+# test this file with the following code
 
 
 def averageSpeed():
