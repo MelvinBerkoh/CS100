@@ -55,3 +55,18 @@ class Student:
     def __init__(self, name, ucid):
         self.name = name
         self.ucid = ucid
+        self.transcript = {}
+
+    def grade_obtained(self, course, grade):
+        self.transcript[course] = grade
+        print(f"Student {self.name} with UCID {
+              self.ucid} has obtained a grade of {grade} in {course}")
+
+    def viewGrade(self, courseName):
+        if courseName in self.transcript:
+            print(f"{self.name}, your grade for {
+                  courseName} is {self.transcript[courseName]}")
+            return self.transcript[courseName]
+        else:
+            print(f"{self.name}, you have not taken {courseName}")
+            return None
