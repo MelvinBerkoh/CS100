@@ -40,3 +40,18 @@ prints that the student does not exist'''
         else:
             print(f"Student {student[0]} with UCID {student[1]} does not exist in {
                   self.courseName} section {self.sectionNumber}")
+
+
+'''
+Write a class definition line and a one line docstring for the class Student. Write an
+__init__ method for the class Student that gives each student its own name and ucid. Make sure that
+you test this on a successful creation of a student object.
+'''
+
+
+class Student:
+    ''' holds the student name and ucid for the object created'''
+
+    def __init__(self, name, ucid):
+        self.name = name
+        self.ucid = ucid
