@@ -42,9 +42,10 @@ you test this on a successful creation of a student object '''
         self.transcript = {}
 
     def grade_obtained(self, course, grade):
+        ''' Function that takes a course and grade and adds it to the student's transcript'''
         self.transcript[course] = grade
         print(f"Student {self.name} with UCID {
-              self.ucid} has obtained a grade of {grade} in {course}")
+            self.ucid} has obtained a grade of {grade} in {course}")
 
     def viewGrade(self, courseName):
         if courseName in self.transcript:
