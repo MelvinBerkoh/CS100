@@ -48,10 +48,11 @@ you test this on a successful creation of a student object '''
             self.ucid} has obtained a grade of {grade} in {course}")
 
     def viewGrade(self, courseName):
-        if courseName in self.transcript:
-            print(f"{self.name}, your grade for {
-                  courseName} is {self.transcript[courseName]}")
-            return self.transcript[courseName]
-        else:
-            print(f"{self.name}, you have not taken {courseName}")
-            return None
+           ''' Function that takes a course name and returns the grade of the student in that course'''
+           if courseName in self.transcript:
+                print(f"{self.name}, your grade for {
+                      courseName} is {self.transcript[courseName]}")
+                return self.transcript[courseName]
+            else:
+                print(f"{self.name}, you have not taken {courseName}")
+                return None
