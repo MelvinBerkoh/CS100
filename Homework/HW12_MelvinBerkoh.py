@@ -1,4 +1,10 @@
 '''
+Melvin Berkoh
+CS 100 Section 002
+HW 12 April 22, 2024
+'''
+
+'''
 Problem 1
 '''
 
@@ -79,3 +85,6 @@ def averageSpeed():
             print('File not found.')
         attempts += 1
     print('You have exceeded the number of attempts.')
+
+
+averageSpeed()
