@@ -35,30 +35,7 @@ print(safeFloat('abc'))
 
 '''
 Problem 3
-A radar speed gun is a device used in law-enforcement to measure the speed of moving vehicles in miles
-per hour. The measured speeds are supposed to be stored in a file, one number per line, as follows:
-65.6
-70.2
-54.9
-Unfortunately, due to an intermittent fault, occasionally multiple numbers are written on a single line as
-follows:
-73.2 65.6 69.8
-Furthermore, occasionally the radar gun outputs a single stray character such as: 67.9z, 6$4.9, or a3.9, to
-illustrate just a few.
-Given a file that has radar speed gun readings, write a function
-averageSpeed() to calculate the average of
-the numbers in the file. Your code must adhere to the following specifications:
-a. Prompt the user for the name of the input file to process. When the user enters a nonexistent file
-name, give the user a second chance. After two wrong entries in a row, quit the program with an
-appropriate message.
-b. Ignore numbers containing stray characters.
-c. Ignore any reading for slow vehicles moving at 2 miles per hour or less.
-d. Print the final average to the console.
-e. Make use of the functions
-safeOpen() and
-safeFloat().
 
->>>
 
 '''
 # test this file with the following code
@@ -66,27 +43,39 @@ safeFloat().
 
 def averageSpeed():
     '''  Function that calculates the average of the numbers in the file. '''
-    # prompt the user for the name of the file
-    fileName = input('Enter the name of the file: ')
     attempts = 0
-    file = safeOpen(fileName)
-    # check if the file exists
-    while file == None:
-        attempts += 1
-        if attempts == 2:
-            print('You have exceeded the number of attempts')
-            break
+    # loop to allow the user to enter the file name twice
+    while attempts < 2:
         fileName = input('Enter the name of the file: ')
-# now that we have the file opened we need to read from it line by line
-
-    total = 0
-    count = 0
-    for line in file:
-        # split the line by space
-        for word in line.split():
-            # check if the word is a number
-            if safeFloat(word) > 2:
-                total += safeFloat(word)
-                count += 1
-    print('The average speed is: ', total/count)
-    file.close()
+        file = safeOpen(fileName)
+        # check if the file exists
+        try:
+            if file is not None:
+                total = 0
+                count = 0
+                try:
+                    # loop through the file and get the numbers
+                    for line in file:
+                        for word in line.split():
+                            try:
+                                # check if the word is a number
+                                speed = safeFloat(word)
+                                # check if the number is greater than 2
+                                if speed > 2:
+                                    total += speed
+                                    count += 1
+                            except ValueError:
+                                pass
+                    if count > 0:
+                        print('The average speed is:', total / count)
+                    else:
+                        print('No valid speeds found in the file.')
+                    return
+                finally:
+                    file.close()
+            else:
+                print('File not found.')
+        except FileNotFoundError:
+            print('File not found.')
+        attempts += 1
+    print('You have exceeded the number of attempts.')
