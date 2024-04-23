@@ -87,4 +87,5 @@ def averageSpeed():
     print('You have exceeded the number of attempts.')
 
 
+# test cases
 averageSpeed()
