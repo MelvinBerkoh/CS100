@@ -42,12 +42,27 @@ class UserAccount:
         ''' returns the User ID of the customer '''
         return "User ID: " + self.id
 
-    class Account:
-        ''' Each user has their own bank account information'''
 
-        #     # hold id
-        #     # blaance
-        #     # customerName
-        #     # funtions would be withdraw
-        #     # desposit
-        #     # getBalance
+# create a class that inherits from the UserAccount class
+class Account(UserAccount):
+    ''' Each user has their own bank account information'''
+
+    def __init__(self, firstName, lastName, ssn, phoneNumber, email):
+        super().__init__(firstName, lastName, ssn, phoneNumber, email)
+        self.balance = 0
+
+    def getBalance(self):
+        return self.balance
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            message = 'Error : You dont have enough funds to withdraw $', str(
+                amount)
+        else:
+            self.balance -= amount
+            message = 'You have successfully withdrew $' + \
+                str(amount) + 'Current balance : $ ' + str(self.balance)
+            return message
+
+    def deposit(self, amount):
+        self.balance += amount
