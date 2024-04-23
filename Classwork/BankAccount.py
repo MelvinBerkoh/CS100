@@ -55,14 +55,22 @@ class Account(UserAccount):
         return self.balance
 
     def withdraw(self, amount):
-        if amount > self.balance:
-            message = 'Error : You dont have enough funds to withdraw $', str(
-                amount)
-        else:
-            self.balance -= amount
-            message = 'You have successfully withdrew $' + \
-                str(amount) + 'Current balance : $ ' + str(self.balance)
+        if type(amount) == int and type(amount) == float:
+
+            if amount > self.balance:
+                message = 'Error : You dont have enough funds to withdraw $', str(
+                    amount)
+            else:
+                self.balance -= amount
+                message = 'You have successfully withdrew $' + \
+                    str(amount) + 'Current balance : $ ' + str(self.balance)
             return message
+        else:
+            return 'Error you need to use a integer or float'
 
     def deposit(self, amount):
-        self.balance += amount
+        if type(amount) == int and type(amount) == float:
+            self.balance += amount
+            return 'You have successfully deposited  $' + str(amount) + 'Current balance : $ ' + str(self.balance)
+        else:
+            return 'Error you need to use a integer or float'
