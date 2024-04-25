@@ -78,6 +78,7 @@ def averageSpeed():
                         print('No valid speeds found in the file.')
                     return
                 finally:
+                    # `close the file`
                     file.close()
             else:
                 print('File not found.')
