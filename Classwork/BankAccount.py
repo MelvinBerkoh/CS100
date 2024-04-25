@@ -9,8 +9,8 @@ class UserAccount:
     def __init__(self, firstName, lastName, ssn, phoneNumber, email):
         self.firstName = firstName
         self.lastName = lastName
-        self.ssn = int(ssn)
-        self.phoneNumber = int(phoneNumber)
+        self.ssn = ssn
+        self.phoneNumber = phoneNumber
         self.email = email
         self.id = ''
         # gets 7 numbers between 0 and 30
@@ -22,27 +22,27 @@ class UserAccount:
 
     def getName(self):
         ''' Returns user's First and Last name'''
-        return "User ID: " + self.id + "name is " + self.firstName + " " + self.lastName
+        return "User ID: " + self.id + " name is " + self.firstName + " " + self.lastName
 # get the social security number
 
     def getSSN(self):
         ''' Returns user's social security number '''
-        return "User ID: " + self.id + "SSN: " + str(self.ssn)
+        return "User ID: " + self.id + " SSN: " + str(self.ssn)
 # get the phone number
 
     def getPhoneNumber(self):
         ''' Returns user's phone number'''
-        return "User ID: " + self.id + "Phone Number: " + str(self.phoneNumber)
+        return "User ID: " + self.id + " Phone Number: " + str(self.phoneNumber)
 # get the email
 
     def getEmail(self):
         ''' Returns user's email address'''
-        return "User ID: " + self.id + "Email: " + self.email
+        return "User ID: " + self.id + " Email: " + self.email
 # get the bank name
 
     def getBankName(self):
         ''' returns the Bank Name'''
-        return "User ID: " + self.id + "Bank Name: " + self.bankName
+        return "User ID: " + self.id + " Bank Name: " + self.bankName
 # get the user ID
 
     def getID(self):
